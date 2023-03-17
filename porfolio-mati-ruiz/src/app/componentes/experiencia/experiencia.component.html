@@ -1,0 +1,17 @@
+
+<section id="section-exp">
+<h2 class="subtitulo" id="subtitulo-experiencia">Experiencia:</h2>
+<div id="container-card-exp">
+  <div class="card" *ngFor=" let exp of experienciaList;">
+
+    <img [src]="exp.logo" id="img-card" class="img-card">
+    <div class="card-body">
+
+      <h5 class="card-title">{{exp.empresa}}</h5>
+      <p class="card-text">{{exp.puesto}}</p>
+      <p class="card-text">{{exp.fecha}}</p>
+    </div>
+
+  </div>
+</div>
+</section>

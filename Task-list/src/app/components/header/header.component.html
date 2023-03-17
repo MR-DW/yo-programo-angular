@@ -1,0 +1,11 @@
+<header>
+    <p>{{title}}</p>
+    <app-boton 
+        color="{{showAddTask ? 'red' : 'green'}}" 
+        text="{{showAddTask ? 'Cerrar' : 'Agregar'}}"
+        (btnClick)="toggleAddTask()"
+        *ngIf = "hasRoute('/')"
+    ></app-boton>
+</header>
+
+

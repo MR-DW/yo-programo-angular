@@ -1,0 +1,136 @@
+#header{
+    height:20%;
+    margin:0;
+    padding:0;
+}
+
+#nav-portafolio{
+    z-index:9999999999;
+    display: flex;
+	flex-direction: row;
+    height: 10%;
+    margin:0%;
+    padding:0 2%;
+    background-color:rgb(180, 180, 180);
+    position: fixed;
+	width: 100vw;
+}
+
+/* conatiner logo */
+.container-fluid1{
+    /* background-color: rgb(30, 151, 151); */
+    width: 70%;
+    height:80%;
+    margin-left:0;
+}
+
+/* boton logo */
+#btn-logo{
+    display: inline-block;
+    width: 25%!important;
+    height:90%!important;
+    width:25%;
+    height:80%;
+    /* background-color: azure; */
+    background-color:rgb(102, 37, 37);
+    text-align:center;
+    border-radius:10px;
+    padding:.5% 0%;
+    text-decoration:none;
+    color:#ffe69c!important;
+    margin:0 .5%;
+}
+
+
+/* todos los boton */
+.a-nav{
+    background-color:rgb(102, 37, 37);
+    text-align:center;
+    border-radius:10px;
+    padding:.5% 0%;
+    text-decoration:none;
+    color:#ffe69c!important;
+    margin:0 .5%;
+}
+
+/* .a-nav:hover{
+    outline:3px solid #ffe69c;
+} */
+
+.container-fluid{
+    width:30%;
+    height:80%;
+}
+
+#navbarSupportedContent{
+    /* background-color:blue; */
+    width:100%;
+    height:100%;
+    padding-top:1%;
+}
+
+.navbar-nav{
+    /* background-color:red; */
+    width:100%;
+    height:100%;
+}
+
+/* boton mi perfil */
+
+.nav-item1{
+    height:80%;
+    width:50%;
+    margin:0 auto;
+    /* background-color:yellow; */
+}
+
+/* botones mi perfil y mi carrera */
+#a-nav,#a-nav1{
+    height:100%;
+    width:90%;
+    /* margin-left:50%; */
+    padding:5% 0 0;
+}
+
+/* container boton mi carrera */
+.nav-item2{
+    margin:0 auto;
+    height:80%!important;
+    width:50%;
+    /* background-color:pink; */
+}
+
+.dropdown-menu{
+    margin-left:0%;
+    height:30vh;
+    width:90%;
+    padding-bottom:2%;
+    /* background-color:rgb(180, 180, 180); */
+}
+
+.container-link{
+    background-color:pink;
+    margin:0 auto;
+    width:90%;
+    height:20%;
+}
+
+#a-nav2,#a-nav3,#a-nav4,#a-nav5{
+    width:100%;
+    height:100%;
+    background-color:rgb(102, 37, 37)!important;
+    text-align:center;
+    border-radius:10px;
+    padding:5% 0 0;
+    text-decoration:none;
+    color:#ffe69c!important;
+    margin:5% 0 0;
+}
+
+#a-nav2:hover,#a-nav3:hover,#a-nav4:hover,#a-nav5:hover{
+    background-color:#ffe69c!important;
+    color:rgb(102, 37, 37)!important;
+    border-radius:10px;
+    outline:3px solid rgb(102, 37, 37);
+
+}

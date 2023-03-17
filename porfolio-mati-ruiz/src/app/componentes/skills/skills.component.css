@@ -1,0 +1,45 @@
+#skills{
+    height:100vh;
+    background-color: #ffe69c;
+    padding:7% 3% 0;
+}
+
+#titulo-aside-h4{
+    margin:0 0 5%;
+    color:black;
+}
+
+#accordionFlushExample{
+    width:80%;
+    margin:0 auto;
+    border-radius:10px;
+}    
+
+.accordion-item{
+    border-radius:10px;
+}
+
+
+.accordion-button{
+    background-color:rgb(102, 37, 37);
+    color:#fff;
+    border-radius:10px;
+}
+
+#flush-collapseOne{
+    color:black;
+    border-radius:10px;
+}
+
+.accordion-body{
+    background-color: black;
+    border-radius:10px;
+}
+
+.texto-accordion{
+    color:#fff;
+    background-color: black;
+}
+
+
+

@@ -1,0 +1,11 @@
+<div id="container-edu">
+  <h3 class="subtitulo" id="subtitulo-educacion">Educación:</h3>
+  <ul *ngFor="let edu of educacionList">
+    <li class="card card-body">
+      <p id="info-educacion">
+        {{edu.institutos}} -
+        {{edu.puesto}} -
+        {{edu.fecha}}</p>
+    </li>
+  </ul>
+</div>

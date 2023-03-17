@@ -1,0 +1,20 @@
+#container-edu{
+    height:100vh;
+    background-color:rgb(102, 37, 37);
+    padding:7% 3% 0;
+}
+
+#subtitulo-educacion{
+    margin: 0 0 5%;
+    text-align:center;
+    color:#fff;
+}
+
+.card-body{
+    background-color:#ffe69c;
+}
+
+#info-educacion{
+    text-align:center;
+    text-transform:uppercase;
+}

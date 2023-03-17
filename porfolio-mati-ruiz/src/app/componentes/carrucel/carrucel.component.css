@@ -1,0 +1,47 @@
+
+
+.carousel-inner{
+    width:100%;
+    margin:20% 0 0;
+    height:100vh;
+}
+
+.carousel-item{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    /* background-color:yellow; */
+}
+
+img{
+    margin:0;
+    height:100vh;
+    width:100%;
+    object-fit:cover;
+    object-position:center center;
+}
+
+/* contenedor texto */
+.carousel-caption{
+    background-color:black;
+    border-radius:10px;
+}
+
+/*main*/
+/* main{
+	color: #ddb;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 75vh;
+	background-image: linear-gradient(
+						0deg,
+						rgba(0, 0, 0, .1),
+						rgba(0, 0, 0, .9)),
+					 url("desarrollo-web.jpg");
+	background-size: cover;
+	background-position: center center;
+} */

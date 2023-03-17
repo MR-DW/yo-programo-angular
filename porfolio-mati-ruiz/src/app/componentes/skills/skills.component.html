@@ -1,0 +1,78 @@
+<div id="skills">
+    <div class="container">
+        <h2 id="titulo-aside-h4">Skills</h2>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <!-- bbdd -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        {{ s.skills.bbdd.titulo }}
+                    </button>
+                </h3>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p class="texto-accordion">{{ s.skills.bbdd.lenguaje }} - {{ s.skills.bbdd.Framework }} : {{ s.skills.bbdd.nombreframe }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- back -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        {{ s.skills.back.titulo }}
+                    </button>
+                </h3>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><p class="texto-accordion">{{ s.skills.back.lenguaje }} - {{ s.skills.back.Framework }}: {{ s.skills.back.nombreframe }}</p></div>
+                </div>
+            </div>
+            <!-- front -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                        aria-controls="flush-collapseThree">
+                        {{ s.skills.front.titulo }}
+                    </button>
+                </h3>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><p class="texto-accordion">{{ s.skills.front.lenguaje[0] }} - {{ s.skills.front.lenguaje[1] }} {{ s.skills.front.Framework }}: {{ s.skills.front.nombreframe[1] }} - {{ s.skills.front.lenguaje[2] }} {{ s.skills.front.Framework }}: {{ s.skills.front.nombreframe[0] }}, {{ s.skills.front.nombreframe[2] }}</p></div>
+                </div>
+            </div>
+            <!-- cms -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false"
+                        aria-controls="flush-collapseTFour">
+                        {{ s.skills.cms.titulo }}
+                    </button>
+                </h3>
+                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><p class="texto-accordion">{{ s.skills.cms.lenguaje }} - {{ s.skills.cms.Framework }}: {{ s.skills.cms.nombreframe }}</p></div>
+                </div>
+            </div>
+            <!-- otros -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false"
+                        aria-controls="flush-collapseFive">
+                        {{ s.skills.otros.titulo }}
+                    </button>
+                </h3>
+                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><p class="texto-accordion">{{ s.skills.otros.lenguaje[0] }}, {{ s.skills.otros.lenguaje[1] }}, {{ s.skills.otros.lenguaje[2] }}</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
