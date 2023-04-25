@@ -2,70 +2,56 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from  '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
-import { CarrucelComponent } from './componentes/carrucel/carrucel.component';
-import { SobreMiComponent } from './componentes/sobreMi/sobreMi.component';
-import { MisTrabajosComponent } from './componentes/misTrabajos/misTrabajos.component';
-import { SkillsComponent } from './componentes/skills/skills.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { HttpClientModule } from '@angular/common/http';
-import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
-import { EducacionComponent } from './componentes/educacion/educacion.component';
-import { MiCarreraComponent } from './componentes/miCarrera/miCarrera.component';
+import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { InterceptorService } from './servicios/interceptor.service';
+import { DatosPorfolioService } from './servicios/datos-porfolio.service';
 
-const appRoutes:Routes = [
-  {path: '', component:  CarrucelComponent},
-  {path: 'sobre-mi', component: SobreMiComponent},
-  // {path: 'mi-carrera', component:  MiCarreraComponent},
-  {path: 'mis-trabajos', component:  MisTrabajosComponent},
-  {path: 'skills', component:  SkillsComponent},
-  {path: 'experiencia', component: ExperienciaComponent},
-  {path: 'educacion', component:   EducacionComponent}
-  //   children: [
-  //     {
-  //       path: 'mis-trabajos',
-  //       component: MisTrabajosComponent,
-  //     },
-  //     {
-  //       path: 'experiencia',
-  //       component: ExperienciaComponent,
-  //     },
-  //     {
-  //       path: 'educacion',
-  //       component: EducacionComponent,
-  //     },
-  //     {
-  //       path: 'skills',
-  //       component: SkillsComponent,
-  //     }
-  //   ]
-  // },
-  // {path: 'mi-carrera/section-exp', component:  MiCarreraComponent},
-]
+// import { CarrucelComponent } from './componentes/carrucel/carrucel.component';
+// import { SobreMiComponent } from './componentes/sobreMi/sobreMi.component';
+// import { MisTrabajosComponent } from './componentes/misTrabajos/misTrabajos.component';
+// import { SkillsComponent } from './componentes/skills/skills.component';
+// import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
+// import { EducacionComponent } from './componentes/educacion/educacion.component';
+// import { MiCarreraComponent } from './componentes/miCarrera/miCarrera.component';
+// import { PostsComponent } from './componentes/posts/posts.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CarrucelComponent,
-    SobreMiComponent,
-    MiCarreraComponent,
-    MisTrabajosComponent,
-    SkillsComponent,
     FooterComponent,
-    ExperienciaComponent,
-    EducacionComponent
+    routingComponents,
+    IniciarSesionComponent,
+    PorfolioComponent
+    // CarrucelComponent,
+    // SobreMiComponent,
+    // MiCarreraComponent,
+    // MisTrabajosComponent,
+    // SkillsComponent,
+    // ExperienciaComponent,
+    // EducacionComponent,
+    // PostsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true})
+    ReactiveFormsModule
+    // RouterModule.forRoot(appRoutes, {enableTracing: true})
   ],
-  providers: [],
+  providers: [DatosPorfolioService,
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

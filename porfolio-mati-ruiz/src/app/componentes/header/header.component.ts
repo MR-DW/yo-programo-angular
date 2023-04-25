@@ -7,7 +7,7 @@ import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
- 
+
   miPorfolio: any;
 
   constructor(private datosPorfolio: DatosPorfolioService){
@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void{
     this.datosPorfolio.obtenerDatos().subscribe(data => {
       console.log(data);
-      this.miPorfolio = data;
+      this.miPorfolio = data[0];
     });
   }
 }
