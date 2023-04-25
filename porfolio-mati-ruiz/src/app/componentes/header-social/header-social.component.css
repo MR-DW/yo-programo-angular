@@ -1,0 +1,32 @@
+
+
+.row{
+  background-color: black;
+  height: 40%;
+  width: 100vw;
+  flex-wrap: nowrap;
+}
+
+#div-APlogo{
+  height: 100%;
+  z-index: 999;
+  width: 80%;
+  /* padding: 0 5px 5px; */
+}
+
+#APlogo{
+  width: 70px;
+}
+
+.social{
+padding: 5px;
+width: 20%;
+}
+
+.link-linkedin{
+  margin-right: 10px;
+}
+
+#linkedin, #github{
+  width: 30px;
+}

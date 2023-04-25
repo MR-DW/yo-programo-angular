@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MiCarreraComponent } from './miCarrera.component';
+import { HeaderSocialComponent } from './header-social.component';
 
-describe('MiCarreraComponent', () => {
-  let component: MiCarreraComponent;
-  let fixture: ComponentFixture<MiCarreraComponent>;
+describe('HeaderSocialComponent', () => {
+  let component: HeaderSocialComponent;
+  let fixture: ComponentFixture<HeaderSocialComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MiCarreraComponent ]
+      declarations: [ HeaderSocialComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MiCarreraComponent);
+    fixture = TestBed.createComponent(HeaderSocialComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

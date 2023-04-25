@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CarrucelComponent } from './componentes/carrucel/carrucel.component';
 import { SobreMiComponent } from './componentes/sobreMi/sobreMi.component';
 import { MisTrabajosComponent } from './componentes/misTrabajos/misTrabajos.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
@@ -11,7 +10,8 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
 import { GuardGuard } from './servicios/guard.guard';
 
 const routes: Routes = [
-  {path:'portfolio', component:PorfolioComponent, canActivate:[GuardGuard]},
+  // canActivate:[GuardGuard]
+  {path:'portfolio', component:PorfolioComponent, },
   {path:'iniciar-sesion', component:IniciarSesionComponent},
   {path:'', redirectTo:'iniciar-sesion', pathMatch:'full'}
   // {path: 'home', component: CarrucelComponent},
@@ -31,7 +31,6 @@ export class AppRoutingModule { }
 
 
 export const routingComponents = [
-  CarrucelComponent,
   SobreMiComponent,
   MisTrabajosComponent,
   SkillsComponent,
