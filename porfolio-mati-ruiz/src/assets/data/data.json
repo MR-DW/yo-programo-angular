@@ -3,13 +3,13 @@
     "segundonombre":"Ignacio",
     "apellido":"Ruiz",
     "sobremi":{
-        "profesion":["Desarrollador Full Stack Python"],
+        "profesion":["Desarrollador Full Stack Junior"],
         "edad":"27 años"
     },
     "experiencia":[{
             "empresa":"RMCuantica",
             "fecha":"Agosto 2022 - Presente",
-            "puesto":"Desarrollador Full Stack Python",            
+            "puesto":"Desarrollador Full Stack Python",
             "logo":"./assets/img/cuantica.png"
             },
             {

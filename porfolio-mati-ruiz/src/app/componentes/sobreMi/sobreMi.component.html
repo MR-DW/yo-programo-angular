@@ -1,13 +1,21 @@
-<div id="div-sobre-mi" class="sobre-mi-porta">
-    <h2 id="titulo-portafolio" class="titulo-porta">
-        ¡Saludos! Soy {{miPorfolio.fullname}} {{miPorfolio.segundonombre}} {{miPorfolio.apellido}}
-    </h2>
-    <p id="text-porta" class="text-porta">
-        Es un gusto presentarme ante ustedes. Tengo {{miPorfolio.sobremi.edad}} y soy
-        <b>{{miPorfolio.sobremi.profesion}}.</b>
-    </p>
-    <div class="img-sobre-mi-container">
+
+
+
+<div id="div-sobre-mi" class="sobre-mi-porta container">
+  <div class="row">
+
+    <div class="img-sobre-mi-container col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+        <h2 id="titulo-portafolio" class="titulo-porta">
+          ¡Saludos! Soy {{miPorfolio.fullname}} {{miPorfolio.segundonombre}} {{miPorfolio.apellido}}
+        </h2>
         <img [src]="img.imgperfil" id="img-sobre-mi">
     </div>
+
+    <p id="text-porta" class="text-porta col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+      Es un gusto presentarme ante ustedes. Tengo {{miPorfolio.sobremi.edad}} y soy
+      <b>{{miPorfolio.sobremi.profesion}}.</b>
+    </p>
+
+  </div>
 </div>
 

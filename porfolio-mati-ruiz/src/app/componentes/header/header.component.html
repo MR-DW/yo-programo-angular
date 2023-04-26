@@ -2,39 +2,33 @@
     <app-header-social></app-header-social>
 
     <nav id="nav-portafolio" class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="row" id="nav-row">
-        <div id="div-btn-logo" class="col-xxl-6 col-xl-6 col-lg-6 col-md-4 col-sm-4 col-xs-4">
-          <a id="btn-logo" class="navbar-branda-nav" routerLink="/">
-            MR<br>Desarrollo Web
-          </a>
-        </div>
-        <div id="div-btns" class="col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-8 col-xs-8">
-          <div class="row" id="navbarSupportedContent">
-            <ul class="navbar-nav row">
-              <li class="nav-item1" id="nav-item2">
-                <a id="a-nav" class="nav-link active a-nav" aria-current="page" [routerLink]="['sobre-mi']">
-                    Mi Perfil
-                </a>
-              </li>
-              <li class="nav-item2 dropdown">
-                <a id="a-nav1" class="nav-link dropdown-toggle a-nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Mi Carrera
-                </a>
-                <!-- *ngFor="let product of products; index as productId" -->
-                <ul class="dropdown-menu" >
-                    <li class="container-link"><a id="a-nav2" class="a-nav dropdown-item" [routerLink]="['mis-trabajos']" > Mis Trabajos</a></li>
-                    <li class="container-link"><a id="a-nav3" class="a-nav dropdown-item" [routerLink]="['experiencia']" >Experiencia</a></li>
-                    <li class="container-link"><a id="a-nav4" class="a-nav dropdown-item" [routerLink]="['educacion']">Educación</a></li>
-                    <li class="container-link"><a id="a-nav5" class="a-nav dropdown-item" [routerLink]="['skills']" >Skills</a></li>
-                </ul>
-              </li>
-              <li class="nav-item1" id="nav-item2">
-                <a id="a-nav" class="nav-link active a-nav" aria-current="page" [routerLink]="['sobre-mi']">
-                    Cerrar Sesión
-                </a>
-              </li>
-            </ul>
-          </div>
+      <div class="container-fluid">
+        <a id="btn-logo"  class="navbar-brand col-xxl-6 col-xl-6 col-lg-6" routerLink="/">MR<br>Desarrollo Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse col-xxl-6 col-xl-6 col-lg-6" id="navbarNav">
+          <ul class="navbar-nav col-xxl-10 col-xl-10 col-lg-10">
+            <li  id="nav-item2" class="nav-item nav-item1 col-xxl-3 col-xl-3 col-lg-3">
+              <a id="a-nav" class="nav-link active a-nav" aria-current="page" [routerLink]="['sobre-mi']">Sobre Mí</a>
+            </li>
+            <li class="nav-item nav-item2 dropdown col-xxl-3 col-xl-3 col-lg-3">
+              <a id="a-nav1" class="nav-link dropdown-toggle a-nav" href="#"role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mi Carrera
+              </a>
+              <ul class="dropdown-menu" >
+                <li class="container-link"><a id="a-nav2" class="a-nav dropdown-item" [routerLink]="['mis-trabajos']" > Mis Trabajos</a></li>
+                <li class="container-link"><a id="a-nav3" class="a-nav dropdown-item" [routerLink]="['experiencia']" >Experiencia</a></li>
+                <li class="container-link"><a id="a-nav4" class="a-nav dropdown-item" [routerLink]="['educacion']">Educación</a></li>
+                <li class="container-link"><a id="a-nav5" class="a-nav dropdown-item" [routerLink]="['skills']" >Skills</a></li>
+              </ul>
+            </li>
+            <li id="nav-item2" class="nav-item nav-item1 col-xxl-3 col-xl-3 col-lg-3">
+              <a id="a-nav" class="nav-link a-nav" aria-current="page" [routerLink]="['inicio-sesion']">
+                Cerrar Sesión
+            </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
