@@ -1,20 +1,38 @@
 #container-edu{
     height:100vh;
-    background-color:rgb(102, 37, 37);
-    padding:7% 3% 0;
+    background-color:rgb(255, 255, 255);
+    padding:9% 1% 0;
 }
 
 #subtitulo-educacion{
-    margin: 0 0 5%;
+    margin: 1% 0 3%;
     text-align:center;
-    color:#fff;
+    color:#000000;
 }
 
 .card-body{
-    background-color:#ffe69c;
+    background-color:#000000;
+    color: white;
+    margin: .5%;
+    padding: 1.5%;
 }
 
 #info-educacion{
     text-align:center;
-    text-transform:uppercase;
+    line-height: 1;
+
+}
+
+.card-body:hover{
+  background-color:#ffffff;
+  color: rgb(0, 0, 0);
+  text-transform:uppercase;
+font-weight: 600;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  #container-edu{
+    padding:25% 1% 0;
+  }
 }

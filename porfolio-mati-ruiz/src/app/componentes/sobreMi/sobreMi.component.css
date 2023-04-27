@@ -1,7 +1,6 @@
 
 #div-sobre-mi{
   height:100vh;
-  width: 100vw;
   padding:7% 5%;
   z-index:-1;
 }
@@ -11,11 +10,11 @@
   flex-wrap: nowrap;
   align-items: center;
   margin:auto 0;
-
+  height:100%;
+  justify-content: flex-start;
 }
 
 #titulo-portafolio{
-/* margin:0 0 3%; */
 color: black;
 }
 
@@ -29,22 +28,22 @@ flex-direction: column;
 align-items: center;
 padding: 0 auto;
 margin: 0 auto;
+height:50%;
 }
 
 #img-sobre-mi{
 margin: 0 auto;
-width: 50%;
+width: 60%;
 box-sizing: content-box;
 border: .5em solid black;
 border-radius: 50%;
 }
 
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 
 #div-sobre-mi{
 	  height:100vh;
-    width: 100%;
     padding:7% 5%;
     z-index:-1;
 }
@@ -54,12 +53,10 @@ border-radius: 50%;
   flex-direction: column;
   align-items: center;
   margin-top: 40%;
-  /* height: 50%; */
 
 }
 
 #titulo-portafolio{
-	/* margin:0 0 3%; */
   color: black;
 }
 
@@ -68,7 +65,6 @@ border-radius: 50%;
 }
 
 .img-sobre-mi-container{
-	width:100%;
   padding: 0 auto;
   margin: 0 auto;
 }

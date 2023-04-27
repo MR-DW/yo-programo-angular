@@ -1,11 +1,12 @@
-<div id="container-edu">
-  <h3 class="subtitulo" id="subtitulo-educacion">Educación:</h3>
-  <ul *ngFor="let edu of educacionList">
-    <li class="card card-body">
+<div id="container-edu" class="container col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+  <h3 class="subtitulo col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="subtitulo-educacion">Educación:</h3>
+  <ul class="d-flex flex-wrap flex-column flex-sm-row">
+    <li *ngFor="let edu of educacionList"  class="card card-body col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
       <p id="info-educacion">
         {{edu.institutos}} -
         {{edu.puesto}} -
-        {{edu.fecha}}</p>
+        {{edu.fecha}}
+      </p>
     </li>
   </ul>
 </div>
