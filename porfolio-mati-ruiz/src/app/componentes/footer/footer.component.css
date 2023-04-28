@@ -1,33 +1,14 @@
 #footer-portafolio{
     background-color:black;
     color: white;
-    height:40vh;
+    height:15vh;
     width:100%;
-    padding: 3% 0 0;
+    padding: 3% 0;
+
 }
 
 #titulo-contact-porta{
     text-align:center;
+    margin: 0 0 2%;
 }
 
-.container-footer{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-}
-
-.a-footer{
-    width:18%;
-    height:50%;
-    background-color:#ffe69c;
-    text-align:center;
-    border-radius:10px;
-    padding:.5% 1%;
-    text-decoration:none;
-    color:rgb(102, 37, 37);
-    margin:3% auto;
-}
-
-.a-footer:hover{
-    outline:5px solid #ffe69c;
-}

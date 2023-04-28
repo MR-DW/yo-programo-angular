@@ -5,28 +5,29 @@
   height: 40%;
   width: 100vw;
   flex-wrap: nowrap;
+align-items: center
 }
 
 #div-APlogo{
   height: 100%;
   z-index: 999;
-  width: 75%;
-  /* padding: 0 5px 5px; */
+  width: 50%;
 }
 
 #APlogo{
-  width: 70px;
+  width: 80px;
 }
 
 .social{
 padding: 5px;
-width: 20%;
+width: 50%;
+display:flex;
+flex-direction: row;
+justify-content: flex-end
 }
 
-.link-linkedin{
-  margin-right: 10px;
-}
 
-#linkedin, #github{
+#linkedin, #github, #email{
   width: 30px;
+  margin-right: 10px;
 }

@@ -4,6 +4,10 @@
     padding:9% 1% 0;
 }
 
+#container-edu ul{
+  padding: 0;
+}
+
 #subtitulo-educacion{
     margin: 1% 0 3%;
     text-align:center;

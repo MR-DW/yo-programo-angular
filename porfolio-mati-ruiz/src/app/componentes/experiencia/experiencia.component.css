@@ -1,9 +1,8 @@
 #section-exp{
     height:100vh;
-    /* width: 100%; */
     background-color:#ffffff;
     padding:9% 0 0;
-    margin:0;
+    margin:0 auto;
     z-index:-1;
 }
 
@@ -50,28 +49,36 @@
 @media (max-width: 768px) {
 #subtitulo-experiencia{
   margin-top: 15%;
+  height: 5%;
+}
+
+.row{
+  height: 100%;
+  align-content: flex-start;
 }
 
   .container-card-exp{
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
 .card{
   display: flex;
   flex-direction: row;
-  margin:5% 0;
-  width: 80%;
-  height: 10%;
-  margin: 1% auto;
+  width: 90%;
+  height: 45%;
 }
 
 #img-card{
   margin:auto 0;
-  object-position:100% 100%;
   vertical-align: middle;
+  width: 20%;
+  height: 80%;
+  background-size: 100% 100%;
 
 }
+
 
 .card-body{
   height:100%;

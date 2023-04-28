@@ -14,7 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InterceptorService } from './servicios/interceptor.service';
 import { DatosPorfolioService } from './servicios/datos-porfolio.service';
 import { HeaderSocialComponent } from './componentes/header-social/header-social.component';
-
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { HeaderSocialComponent } from './componentes/header-social/header-social
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgCircleProgressModule.forRoot({})
     // RouterModule.forRoot(appRoutes, {enableTracing: true})
   ],
   providers: [DatosPorfolioService,

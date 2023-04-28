@@ -1,45 +1,68 @@
 #skills{
     height:100vh;
-    background-color: #ffe69c;
+    background-color: #ffffff;
     padding:7% 3% 0;
 }
 
 #titulo-aside-h4{
-    margin:0 0 5%;
+    margin:2% auto;
     color:black;
 }
 
 #accordionFlushExample{
-    width:80%;
+    width:100%;
     margin:0 auto;
-    border-radius:10px;
-}    
-
-.accordion-item{
-    border-radius:10px;
 }
 
 
 .accordion-button{
-    background-color:rgb(102, 37, 37);
+    background-color:rgb(0, 0, 0);
     color:#fff;
-    border-radius:10px;
 }
 
 #flush-collapseOne{
-    color:black;
+    color:rgb(255, 255, 255);
     border-radius:10px;
 }
 
 .accordion-body{
-    background-color: black;
-    border-radius:10px;
+    background-color: rgb(0, 0, 0);
+
 }
 
 .texto-accordion{
-    color:#fff;
-    background-color: black;
+  display: flex;
+  flex-direction: row;
+    color:#000000;
+    background-color: rgb(255, 255, 255);
+    border-radius:10px;
+    margin:0 auto;
+}
+
+span{
+  width: 25%;
+  margin:0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+
 }
 
 
+@media (max-width: 768px) {
+  #titulo-aside-h4{
+    margin: 20% auto 3%;
+  }
 
+  .texto-accordion{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  span{
+    width: 33%;
+    padding: 0 7%;
+  }
+  p{
+  text-align: center;
+  }
+}

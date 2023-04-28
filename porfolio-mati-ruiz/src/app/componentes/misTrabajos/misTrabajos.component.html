@@ -1,53 +1,49 @@
-<aside id="aside-porta">
-    <div class="container">
-        <h2 id="titulo-aside">Mis Páginas Webs</h2>
+<div id="aside-porta" class="container">
 
-        <div class="container-ul" >
+  <h2 id="titulo-aside">Mis Proyectos</h2>
+  <div class="row d-flex flex-wrap flex-column flex-sm-row">
+    <div class="card " id="card-paginas"
+      *ngFor="let trabajo of trabajos">
+      <div class="card-body ">
+        <h3 class="card-title">{{ trabajo.titulo }}</h3>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          id="btn-modal">+INFO</button>
 
-            <div class="card" id="card-paginas" *ngFor="let trabajo of trabajos">
-                <div class="card-body">
-                    <h3 class="card-title">{{ trabajo.titulo }}</h3>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        id="btn-modal">
-                        <a id="section-firstweb-h3" class="card-a" href="#exampleModal">Ver</a>
-                    </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 id="section-firstweb">{{ trabajo.titulo }}: {{ trabajo.empresa }}</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="container-p-a">
+                    <p id="Descripcion-firstweb">{{ trabajo.descripcion }}
+                    </p>
+                  </div>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true" >
-                        <div class="modal-dialog">
-                            <div class="modal-content" >
-                                <div class="modal-header">
-                                    <h4 id="section-firstweb">{{ trabajo.titulo }}: {{ trabajo.empresa }}</h4>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <div class="container-p-a">
-                                            <p id="Descripcion-firstweb">{{ trabajo.descripcion }}
-                                            </p>
-                                        </div>
-
-                                        <figure id="figure-firstweb">
-                                            <img id="img-firstweb" [src]="trabajo.img"
-                                                [name]="trabajos.titulo" title="Conexión" [alt]="trabajos.titulo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <a class="link-pagina" [href]="trabajo.link" target="_blank">
-                                        Página Web</a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  <figure id="figure-firstweb">
+                    <img id="img-firstweb" [src]="trabajo.img" [name]="trabajos.titulo" title="Conexión"
+                      [alt]="trabajos.titulo">
+                  </figure>
                 </div>
+              </div>
+              <div class="modal-footer">
+                <a class="link-pagina col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-sm-8 col-xs-8" [href]="trabajo.link" target="_blank">
+                  Página Web</a>
+
+              </div>
             </div>
-
+          </div>
         </div>
-
+      </div>
     </div>
-</aside>
+  </div>
+
+
+
+</div>
