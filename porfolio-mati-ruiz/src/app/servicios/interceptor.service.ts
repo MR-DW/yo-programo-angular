@@ -1,27 +1,34 @@
 import { Injectable } from '@angular/core';
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { HttpEvent, HttpHandler, HTTP_INTERCEPTORS, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { AutenticacionService } from './autenticacion.service';
+import { TokenService } from './token.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class InterceptorService implements HttpInterceptor {
+export class InterceptorService {
 
-  constructor(private autenticacionServicio:AutenticacionService) { }
+  constructor(private tokenService:TokenService) { }
 
-intercept(req:HttpRequest<any>, next:HttpHandler): Observable<HttpEvent<any>>{
+  intercept(req:HttpRequest<any>, next:HttpHandler): Observable<HttpEvent<any>>{
 
-  var currentUser = this.autenticacionServicio.UsuarioAutenticado;
-  if(currentUser && currentUser.accessToken){
-    req=req.clone({
-      setHeaders:{
-        Authorization: `Bearer ${currentUser.accessToken}`
-      }
-    })
+    let intReq = req;
+    const token = this.tokenService.getToken();
+    if(token!=null){
+      intReq = req.clone({
+        headers: req.headers.set('Authorization', 'Bearer' + token)
+      });
+    }
+
+    console.log("Interceptor está corriendo, IntReq: "+ intReq);
+    return next.handle(intReq);
   }
-  console.log("Interceptor está corriendo " + JSON.stringify(currentUser));
-  return next.handle(req);
-}
 
 }
+
+
+export const InterceptorProvider = [{
+  provide: HTTP_INTERCEPTORS,
+  useClass: InterceptorService,
+  multi: true
+}]

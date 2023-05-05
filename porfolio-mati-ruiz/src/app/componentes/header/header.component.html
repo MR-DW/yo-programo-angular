@@ -3,7 +3,9 @@
 
     <nav id="nav-portafolio" class="navbar navbar-expand-lg bg-body-tertiary col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="container-fluid col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
-        <a id="btn-logo"  class="navbar-brand col-xxl-2 col-xl-2 col-lg-2" href="portfolio">MR<br>Desarrollo Web</a>
+        <button type="button" id="btn-logo"  class="navbar-brand col-xxl-2 col-xl-2 col-lg-2" (click)="volverAlMenuPrincipal()">
+          MR<br>Desarrollo Web
+        </button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,9 +26,12 @@
               </ul>
             </li>
             <li id="nav-item2" class="nav-item nav-item1 col-xxl-2 col-xl-2 col-lg-2">
-              <a id="a-nav" class="nav-link a-nav" aria-current="page" routerLink="/">
+              <!-- <button id="a-nav" class="nav-link a-nav" aria-current="page" *ngIf="!isLogged" (click)="login()">
+               Ingresar*ngIf="!isLogged"
+              </button> -->
+              <button id="a-nav" class="nav-link a-nav" aria-current="page"  (click)="login()">
                 Cerrar Sesión
-            </a>
+              </button>
             </li>
           </ul>
         </div>
