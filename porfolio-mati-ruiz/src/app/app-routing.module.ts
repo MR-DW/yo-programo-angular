@@ -7,19 +7,18 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia/new-experiencia.component';
+
 import { GuardGuard } from './servicios/guard.guard';
+import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia/edit-experiencia.component';
 
 const routes: Routes = [
   // canActivate:[GuardGuard]
   {path:'portfolio', component:PorfolioComponent, },
   {path:'iniciar-sesion', component:IniciarSesionComponent},
-  {path:'', redirectTo:'iniciar-sesion', pathMatch:'full'}
-  // {path: 'home', component: CarrucelComponent},
-  // {path: 'sobre-mi', component: SobreMiComponent},
-  // {path: 'mis-trabajos', component: MisTrabajosComponent},
-  // {path: 'skills', component: SkillsComponent},
-  // {path: 'experiencia', component: ExperienciaComponent},
-  // {path: 'educacion', component: EducacionComponent}
+  {path:'', redirectTo:'iniciar-sesion', pathMatch:'full'},
+  {path:'nuevaexperiencia', component:NewExperienciaComponent},
+  {path:'editarexperiencia/:id', component:EditExperienciaComponent}
 ];
 
 @NgModule({

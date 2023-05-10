@@ -16,6 +16,8 @@ import { DatosPorfolioService } from './servicios/datos-porfolio.service';
 import { HeaderSocialComponent } from './componentes/header-social/header-social.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FormsModule } from '@angular/forms';
+import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia/edit-experiencia.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { FormsModule } from '@angular/forms';
     routingComponents,
     IniciarSesionComponent,
     PorfolioComponent,
-    HeaderSocialComponent
+    HeaderSocialComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent
   ],
   imports: [
     BrowserModule,

@@ -46,6 +46,27 @@
     color:#fff;
 }
 
+.titulo{
+  width: 25%;
+}
+
+.descripcion{
+  width: 50%;
+}
+
+.descripcion .text{
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.editar, .borrar{
+  width: 10%;
+}
+
+
+
 @media (max-width: 768px) {
 #subtitulo-experiencia{
   margin-top: 15%;
