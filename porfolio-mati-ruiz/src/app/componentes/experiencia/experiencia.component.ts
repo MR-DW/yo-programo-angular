@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
-// import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
-// import { ImgPorfolioService } from 'src/app/servicios/img/img-porfolio.service';
 import { SExperienciaService } from 'src/app/servicios/s-experiencia.service';
 import { TokenService } from 'src/app/servicios/token.service';
 
@@ -15,11 +13,8 @@ export class ExperienciaComponent implements OnInit{
 
   experiencia: Experiencia[]=[];
   data: any;
-  // experienciaList:any;
-  // img:any;
 
   constructor(private sExperiencia:SExperienciaService, private tokenService: TokenService
-    // private datosPorfolio: DatosPorfolioService,private imgPorfolio: ImgPorfolioService
     ){
 
   }
@@ -27,8 +22,6 @@ export class ExperienciaComponent implements OnInit{
   isLogged = false;
 
   ngOnInit(): void{
-
-
     //llama a la funcion que trae las experiencias
     this.cargarExperiencia();
 
@@ -39,13 +32,6 @@ export class ExperienciaComponent implements OnInit{
     }else{
       this.isLogged = false;
     }
-    // this.datosPorfolio.obtenerDatos().subscribe(data => {
-    //   this.experienciaList = data.experiencia;
-    // });
-
-    // this.imgPorfolio.obtenerImg().subscribe(data => {
-    //   this.img = data;
-    // });
   }
 
   //trae las experiencias
