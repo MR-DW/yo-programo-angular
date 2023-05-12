@@ -1,16 +1,16 @@
 <div class="container">
   <div class="row">
     <div>
-      <h2>Ingrese Su Nueva Experiencia Laboral</h2>
+      <h2>Ingrese Su Nueva Educación</h2>
       <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
         <div class="form-group">
-          <label for="nombreExp">Nombre de la Empresa</label>
-          <input placeholder="Empresa" type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="nombreEdu" required />
+          <label for="nombreExp">Nombre de la Certificación</label>
+          <input placeholder="Titulación" type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="nombreEdu" required />
 
         </div>
         <div class="form-group">
-          <label for="descripcionExp">Describa su trabajo</label>
-          <input placeholder="Desarrollador..." type="text" class="form-control" id="descripcionExp" name="descripcionExp" [(ngModel)]="descripcionEdu" required />
+          <label for="descripcionExp">Descripción breve de sus estudios</label>
+          <input placeholder="Instituto - Duración - Información" type="text" class="form-control" id="descripcionExp" name="descripcionExp" [(ngModel)]="descripcionEdu" required />
 
         </div>
         <button class="btn btn-dark" type="submit">Guardar</button>

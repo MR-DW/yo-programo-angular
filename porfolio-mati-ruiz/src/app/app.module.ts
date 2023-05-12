@@ -18,6 +18,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FormsModule } from '@angular/forms';
 import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia/edit-experiencia.component';
+import { EditEducacionComponent } from './componentes/educacion/edit-educacion/edit-educacion.component';
+import { NeweducacionComponent } from './componentes/educacion/new-educacion/new-educacion.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { EditExperienciaComponent } from './componentes/experiencia/edit-experie
     PorfolioComponent,
     HeaderSocialComponent,
     NewExperienciaComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    EditEducacionComponent,
+    NeweducacionComponent
   ],
   imports: [
     BrowserModule,

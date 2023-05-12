@@ -19,15 +19,35 @@ align-items: center
 }
 
 .social{
-padding: 5px;
+  height: 100%;
 width: 50%;
 display:flex;
 flex-direction: row;
 justify-content: flex-end
 }
 
+a{
+  width: 10%;
+  height: 100%;
+}
 
-#linkedin, #github, #email{
-  width: 30px;
-  margin-right: 10px;
+/* ::before */
+
+i {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  a{
+    width: 20%;
+  }
+  i {
+    font-size: 20px;
+  }
+
+
 }
