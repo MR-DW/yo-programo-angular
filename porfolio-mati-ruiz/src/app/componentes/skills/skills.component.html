@@ -1,113 +1,45 @@
 <div id="skills" class="container">
   <h2 id="titulo-aside-h4" class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">Habilidades</h2>
 
-  <div class="accordion accordion-flush col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10"
-    id="accordionFlushExample">
-
-    <button type="button" class="btn btn-dark" routerLink="/nuevaskill" *ngIf="isLogged">
-      Agregar<i class="bi bi-plus"></i>
-    </button>
-
-    <div class="accordion-item col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <h3 class="accordion-header col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="flush-headingOne">
-      Soft and Hard Skills
-
-      </h3>
-      <div class="row col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl2 col-xxl-12" *ngFor="let skill of skills">
-        <span>
-          <!-- [percent]="(skill.porcentajeSkills)" -->
-          <circle-progress [radius]="50" [imageSrc]="''" [title]="(skill.nombreSkills)" [showImage]="true"
-            [imageHeight]="50" [imageWidth]="50" [backgroundColor]="'white'" [outerStrokeWidth]="3"
-            [innerStrokeWidth]="5" [outerStrokeColor]="'black'" [innerStrokeColor]="'black'" [animation]="true"
-            [animationDuration]="300"></circle-progress>
-          <p>HTML</p>
-          <button *ngIf="isLogged" class="btn btn-light" routerLink="/editarskills/{{skill.id}}">
-            <i class="bi bi-pencil-square"></i>
+      <div id="row" class="row">
+          <h3 class="accordion-header " id="flush-headingOne">
+          Soft and Hard Skills
+          </h3>
+          <button type="button" class="btn btn-dark" routerLink="/nuevaskill" *ngIf="isLogged">
+            Agregar<i class="bi bi-plus"></i>
           </button>
-          <button *ngIf="isLogged" class="btn btn-danger" (click)="borrar(skill.id)">
-            <i class="bi bi-trash3"></i>
-          </button>
-        </span>
       </div>
+      <div id="row2" class="d-flex flex-wrap  flex-sm-row">
+          <div class="contenedor" *ngFor="let skill of skills">
+            <span id="span1" >
+              <circle-progress
+                  [percent]="(skill.porcentajeSkills)"
+                  [radius]="50"
+                  [backgroundColor]="'black'"
+                  [outerStrokeWidth]="3"
+                  [innerStrokeWidth]="1"
+                  [outerStrokeColor]="'white'"
+                  [innerStrokeColor]="'white'"
+                  [animation]="true"
+                  [animationDuration]="4000">
+              </circle-progress>
+            </span>
+            <span id="span2">
 
+              <p>{{skill.nombreSkills}}</p>
 
-    </div>
+              <div class="botonera">
+                <button *ngIf="isLogged" class="btn btn-dark ml-1" routerLink="/editarskills/{{skill.id}}">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button *ngIf="isLogged" class="btn btn-danger mr-1" (click)="borrar(skill.id)">
+                  <i class="bi bi-trash3"></i>
+                </button>
+              </div>
+
+            </span>
+          </div>
+
+      </div>
   </div>
 
-
-
-
-  <!-- <div class="accordion accordion-flush col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10" id="accordionFlushExample">
-             bbdd
-            <div class="accordion-item col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h3 class="accordion-header col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        {{ s.skills.bbdd.titulo }}
-                    </button>
-                </h3>
-                <div id="flush-collapseOne" class="accordion-collapse collapse col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" aria-labelledby="flush-headingOne"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <p class="texto-accordion">{{ s.skills.bbdd.lenguaje }} - {{ s.skills.bbdd.Framework }} : {{ s.skills.bbdd.nombreframe }}</p>
-                    </div>
-                </div>
-            </div>
-            back
-            <div class="accordion-item">
-                <h3 class="accordion-header col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="flush-headingTwo">
-                    <button class="accordion-button collapsed col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        {{ s.skills.back.titulo }}
-                    </button>
-                </h3>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" aria-labelledby="flush-headingTwo"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"><p class="texto-accordion">{{ s.skills.back.lenguaje }} - {{ s.skills.back.Framework }}: {{ s.skills.back.nombreframe }}</p></div>
-                </div>
-            </div>
-             front
-            <div class="accordion-item">
-                <h3 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree" aria-expanded="false"
-                        aria-controls="flush-collapseThree">
-                        {{ s.skills.front.titulo }}
-                    </button>
-                </h3>
-                <div id="flush-collapseThree" class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body"><p class="texto-accordion">{{ s.skills.front.lenguaje[0] }} - {{ s.skills.front.lenguaje[1] }} {{ s.skills.front.Framework }}: {{ s.skills.front.nombreframe[1] }} - {{ s.skills.front.lenguaje[2] }} {{ s.skills.front.Framework }}: {{ s.skills.front.nombreframe[0] }}, {{ s.skills.front.nombreframe[2] }}</p></div>
-                </div>
-            </div>
-            cms
-            <div class="accordion-item">
-                <h3 class="accordion-header" id="flush-headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseFour" aria-expanded="false"
-                        aria-controls="flush-collapseTFour">
-                        {{ s.skills.cms.titulo }}
-                    </button>
-                </h3>
-                <div id="flush-collapseFour" class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body"><p class="texto-accordion">{{ s.skills.cms.lenguaje }} - {{ s.skills.cms.Framework }}: {{ s.skills.cms.nombreframe }}</p></div>
-                </div>
-            </div>
-             otros
-            <div class="accordion-item">
-                <h3 class="accordion-header" id="flush-headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseFive" aria-expanded="false"
-                        aria-controls="flush-collapseFive">
-                        {{ s.skills.otros.titulo }}
-                    </button>
-                </h3>
-                <div id="flush-collapseFive" class="accordion-collapse collapse"
-                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body"><p class="texto-accordion">{{ s.skills.otros.lenguaje[0] }}, {{ s.skills.otros.lenguaje[1] }}, {{ s.skills.otros.lenguaje[2] }}</p></div>
-                </div>
-            </div>
-        </div> -->
-
-</div>

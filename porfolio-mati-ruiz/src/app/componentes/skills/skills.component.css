@@ -9,43 +9,59 @@
     color:black;
 }
 
-#accordionFlushExample{
-    width:100%;
-    margin:0 auto;
+#row h3{
+  width: 80%;
+}
+#row button{
+  width: 20%;
 }
 
-
-.accordion-button{
-    background-color:rgb(0, 0, 0);
-    color:#fff;
+#row2{
+  padding: 2% 0;
 }
 
-#flush-collapseOne{
-    color:rgb(255, 255, 255);
-    border-radius:10px;
-}
-
-.accordion-body{
-    background-color: rgb(0, 0, 0);
-
-}
-
-.texto-accordion{
+.contenedor{
   display: flex;
   flex-direction: row;
-    color:#000000;
-    background-color: rgb(255, 255, 255);
-    border-radius:10px;
-    margin:0 auto;
+  width: 24%;
+  align-items: center;
+  outline: 1px solid black;
+  border-radius: 40%;
+  padding: .5%;
+  margin: .5%;
+  background-color: #000000;
+  color: #ffffff;
 }
 
-span{
-  width: 25%;
+#span1{
+  width: 50%;
+  z-index:9999;
+}
+#span2{
+  width: 50%;
   margin:0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
 
+}
+
+#span2 p{
+  margin: 5% auto;
+}
+
+.botonera{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.botonera .ml-1{
+  margin-right: 5%;
+}
+
+.botonera button{
+  border-radius: 50%;
 }
 
 
@@ -54,15 +70,21 @@ span{
     margin: 20% auto 3%;
   }
 
-  .texto-accordion{
+  #row2{
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
+
+  .contenedor{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    width: 45%;
+    padding: 1%;
+    margin: .5% auto;
+    border-radius: 45%;
   }
-  span{
-    width: 33%;
-    padding: 0 7%;
-  }
-  p{
-  text-align: center;
+
+  .botonera .ml-1{
+    margin-right: 0;
   }
 }

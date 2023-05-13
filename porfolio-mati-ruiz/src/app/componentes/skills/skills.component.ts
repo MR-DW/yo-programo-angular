@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Skills } from 'src/app/model/skills';
-import { DatosPorfolioService } from 'src/app/servicios/serviciosABorrar/datos-porfolio.service';
 import { SkillsService } from 'src/app/servicios/skills.service';
 import { TokenService } from 'src/app/servicios/token.service';
 
@@ -13,6 +12,7 @@ import { TokenService } from 'src/app/servicios/token.service';
 export class SkillsComponent implements OnInit {
 
   skills:Skills[]=[];
+  porcentajeString : string = '';
 
   constructor(private Sskills: SkillsService, private tokenService: TokenService){}
 
