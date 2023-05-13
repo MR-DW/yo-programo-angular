@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
+import { Skills } from 'src/app/model/skills';
+import { DatosPorfolioService } from 'src/app/servicios/serviciosABorrar/datos-porfolio.service';
+import { SkillsService } from 'src/app/servicios/skills.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 
 @Component({
@@ -9,18 +12,38 @@ import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
 })
 export class SkillsComponent implements OnInit {
 
-  s: any;
+  skills:Skills[]=[];
 
-  constructor(private datosPorfolio: DatosPorfolioService){
+  constructor(private Sskills: SkillsService, private tokenService: TokenService){}
 
-  }
+  isLogged = false;
 
   ngOnInit(): void{
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
-      // console.log(data);
-      this.s = data;
-    });
+    this.listarSkills();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+  }
 
+  listarSkills():void{
+    this.Sskills.lista().subscribe(data => {
+      this.skills = data;
+      console.log("skills", this.skills);
+    });
+  }
+
+  borrar(id: number){
+    if(id != undefined){
+      this.Sskills.delete(id).subscribe(
+        data => {
+          this.listarSkills();
+        }, err => {
+          alert("no se pudo borrar la skill")
+        }
+      )
+    }
   }
 
 }

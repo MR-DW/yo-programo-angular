@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/model/educacion';
-import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
+import { DatosPorfolioService } from 'src/app/servicios/serviciosABorrar/datos-porfolio.service';
 import { EducacionService } from 'src/app/servicios/educacion.service';
 import { TokenService } from 'src/app/servicios/token.service';
 
@@ -31,6 +31,7 @@ export class EducacionComponent implements OnInit{
     this.educacionS.lista().subscribe(
       data=>{
         this.educacion = data;
+        console.log(this.educacion);
       }
     )
   }

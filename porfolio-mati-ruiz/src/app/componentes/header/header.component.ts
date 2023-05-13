@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
 import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
@@ -14,17 +13,11 @@ export class HeaderComponent implements OnInit {
 
   isLogged = false;
 
-
-
-  constructor(private datosPorfolio: DatosPorfolioService, private router:Router, private tokenService:TokenService){
+  constructor(private router:Router, private tokenService:TokenService){
 
   }
 
   ngOnInit(): void{
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.miPorfolio = data[0];
-    });
 
     if(this.tokenService.getToken()){
       this.isLogged=true;
@@ -32,12 +25,6 @@ export class HeaderComponent implements OnInit {
       this.isLogged = false;
     }
   }
-
-  // onLogOut(): void{
-  //   this.tokenService.logOut();
-  //   window.location.reload();
-  //   this.router.navigate(['/iniciar-sesion']);
-  // }
 
   login(){
     this.router.navigate(['/iniciar-sesion']);

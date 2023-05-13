@@ -11,8 +11,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { InterceptorProvider, InterceptorService } from './servicios/interceptor.service';
-import { DatosPorfolioService } from './servicios/datos-porfolio.service';
+import { InterceptorProvider, InterceptorService } from './servicios/serviciosABorrar/interceptor.service';
+import { DatosPorfolioService } from './servicios/serviciosABorrar/datos-porfolio.service';
 import { HeaderSocialComponent } from './componentes/header-social/header-social.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FormsModule } from '@angular/forms';
@@ -20,6 +20,8 @@ import { NewExperienciaComponent } from './componentes/experiencia/new-experienc
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia/edit-experiencia.component';
 import { EditEducacionComponent } from './componentes/educacion/edit-educacion/edit-educacion.component';
 import { NeweducacionComponent } from './componentes/educacion/new-educacion/new-educacion.component';
+import { NewSkillsComponent } from './componentes/skills/new-skills/new-skills.component';
+import { EditSkillsComponent } from './componentes/skills/edit-skills/edit-skills.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { NeweducacionComponent } from './componentes/educacion/new-educacion/new
     NewExperienciaComponent,
     EditExperienciaComponent,
     EditEducacionComponent,
-    NeweducacionComponent
+    NeweducacionComponent,
+    NewSkillsComponent,
+    EditSkillsComponent
   ],
   imports: [
     BrowserModule,

@@ -37,7 +37,11 @@ export class ExperienciaComponent implements OnInit{
   //trae las experiencias
   cargarExperiencia():void{
     this.sExperiencia.lista().subscribe(
-      data => {this.experiencia = data;});
+      data => {
+        this.experiencia = data;
+        console.log("experiencia",this.experiencia);
+      }
+    );
   }
 
   borrar(id?: number){

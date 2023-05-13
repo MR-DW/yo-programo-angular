@@ -11,8 +11,10 @@ import { NewExperienciaComponent } from './componentes/experiencia/new-experienc
 import { NeweducacionComponent } from './componentes/educacion/new-educacion/new-educacion.component';
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia/edit-experiencia.component';
 import { EditEducacionComponent } from './componentes/educacion/edit-educacion/edit-educacion.component';
+import { EditSkillsComponent } from './componentes/skills/edit-skills/edit-skills.component';
+import { NewSkillsComponent } from './componentes/skills/new-skills/new-skills.component';
 
-import { GuardGuard } from './servicios/guard.guard';
+import { GuardGuard } from './servicios/serviciosABorrar/guard.guard';
 const routes: Routes = [
   // canActivate:[GuardGuard]
   {path:'portfolio', component:PorfolioComponent, },
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path:'nuevaexperiencia', component:NewExperienciaComponent},
   {path:'editarexperiencia/:id', component:EditExperienciaComponent},
   {path:'nuevaeducacion', component:NeweducacionComponent},
-  {path:'editareducacion/:id', component:EditEducacionComponent}
+  {path:'editareducacion/:id', component:EditEducacionComponent},
+  {path:'editarskills/:id', component:EditSkillsComponent},
+  {path:'nuevaskill', component:NewSkillsComponent}
 ];
 
 @NgModule({
