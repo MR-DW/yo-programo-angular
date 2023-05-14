@@ -13,6 +13,7 @@ import { EditExperienciaComponent } from './componentes/experiencia/edit-experie
 import { EditEducacionComponent } from './componentes/educacion/edit-educacion/edit-educacion.component';
 import { EditSkillsComponent } from './componentes/skills/edit-skills/edit-skills.component';
 import { NewSkillsComponent } from './componentes/skills/new-skills/new-skills.component';
+import { EditarSobreMiComponent } from './componentes/sobreMi/editar-sobre-mi/editar-sobre-mi.component';
 
 import { GuardGuard } from './servicios/serviciosABorrar/guard.guard';
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'nuevaeducacion', component:NeweducacionComponent},
   {path:'editareducacion/:id', component:EditEducacionComponent},
   {path:'editarskills/:id', component:EditSkillsComponent},
-  {path:'nuevaskill', component:NewSkillsComponent}
+  {path:'nuevaskill', component:NewSkillsComponent},
+  {path:'editarsobremi/:id', component:EditarSobreMiComponent}
 ];
 
 @NgModule({

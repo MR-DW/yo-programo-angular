@@ -1,42 +1,40 @@
 <div id="aside-porta" class="container">
 
-  <h2 id="titulo-aside">Mis Proyectos</h2>
-  <div class="row d-flex flex-wrap flex-column flex-sm-row">
-    <div class="card " id="card-paginas"
-      *ngFor="let trabajo of trabajos">
+
+  <div class="row d-flex flex-wrap flex-column flex-sm-row" id="row1">
+    <div class="card " id="card-paginas">
+      <h2 id="titulo-aside">Mis Proyectos</h2>
       <div class="card-body ">
-        <h3 class="card-title">{{ trabajo.titulo }}</h3>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-          id="btn-modal">+INFO</button>
+          id="btn-modal">Ver Listado
+          <i class="bi bi-box-arrow-in-right"></i>
+
+        </button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
-                <h4 id="section-firstweb">{{ trabajo.titulo }}: {{ trabajo.empresa }}</h4>
+
+              <div class="modal-body">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 </button>
-              </div>
-              <div class="modal-body">
-                <div class="container">
-                  <div class="container-p-a">
-                    <p id="Descripcion-firstweb">{{ trabajo.descripcion }}
-                    </p>
-                  </div>
+                <div id="contenedor" class="container" *ngFor="let trabajo of trabajos">
 
-                  <figure id="figure-firstweb">
-                    <img id="img-firstweb" [src]="trabajo.img" [name]="trabajos.titulo" title="Conexión"
-                      [alt]="trabajos.titulo">
-                  </figure>
+
+                    <p id="Descripcion-firstweb">
+                      <i class="bi bi-symmetry-horizontal"></i>
+                      {{ trabajo.titulo }}:
+                      <a class="link-pagina col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-sm-8 col-xs-8" [href]="trabajo.link" target="_blank">
+                      {{ trabajo.link }}</a>
+
+                    </p>
+
+
                 </div>
               </div>
-              <div class="modal-footer">
-                <a class="link-pagina col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-sm-8 col-xs-8" [href]="trabajo.link" target="_blank">
-                  Página Web</a>
 
-              </div>
             </div>
           </div>
         </div>

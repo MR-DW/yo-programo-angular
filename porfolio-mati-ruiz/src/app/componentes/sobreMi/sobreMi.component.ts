@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { persona } from 'src/app/model/persona.model';
+import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/servicios/persona.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-sobre-mi',
@@ -9,19 +10,29 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 })
 export class SobreMiComponent implements OnInit {
 
-  persona: persona = new persona("", "", "", "", "");
+  persona: Persona = new Persona("", "", "", "", "", "");
+  isLogged: boolean;
 
-  constructor(public personaService: PersonaService ){
+  constructor(public personaService: PersonaService, private tokenService: TokenService ){
 
   }
 
   ngOnInit(): void{
-    let id = 0;
+    this.cargarPersona();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+  }
 
-    this.personaService.getPersona(id).subscribe(data =>
-      {this.persona = data});
-    console.log("sobre mi", this.persona);
-
+  cargarPersona(){
+    this.personaService.detail(5).subscribe(
+      data=>{
+        this.persona = data;
+        console.log("persona", this.persona);
+      }
+    )
   }
 
 }

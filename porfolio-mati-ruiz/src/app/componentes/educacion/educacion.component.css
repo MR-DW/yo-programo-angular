@@ -69,6 +69,7 @@ li{
 
 @media (max-width: 768px) {
   #container-edu{
+    height:85vh;
     padding:25% 1% 0;
   }
 

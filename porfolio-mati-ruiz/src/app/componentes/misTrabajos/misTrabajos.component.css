@@ -1,6 +1,6 @@
 #aside-porta{
     background-color:rgb(255, 255, 255);
-    padding:9% 0 0;
+    padding:15% 0 0;
     color:rgb(0, 0, 0);
     height:100vh;
 }
@@ -9,11 +9,14 @@
     margin: 0 auto 3%;
     color: black;
 }
-
+#row1{
+  height: 60%;
+}
 
 #card-paginas{
     margin:0 auto 1%;
-    width:30%;
+    width:60%;
+    height: 60%!important;
     padding: 0;
     border-radius: 10px;
 }
@@ -65,14 +68,20 @@
     height:80%;
     background-color:rgb(255, 255, 255);
 }
+#contenedor{
+  margin: 3% 0;
+  border-top: 1px inset black;
+}
 
 #Descripcion-firstweb{
+  margin: 2% auto;
     color:rgb(0, 0, 0);
     width:100%;
-    margin-right:30%;
     text-align:justify;
     height:50%;
     font-size: 12px;
+    padding: 5% auto;
+
 }
 
 #figure-firstweb{
@@ -95,26 +104,30 @@
 
 }
 
+
+
 .link-pagina{
     border-radius:10px;
     padding:1%;
     height:80%;
-    background-color:black;
-    color:white;
+    /* background-color:black; */
+    color:rgb(0, 0, 0);
     text-align: center;
 
 }
 
 .link-pagina:hover{
-    box-shadow:none;
+    background-color:black;
+    color:rgb(255, 255, 255);
 }
 
 @media (max-width:767px){
   #aside-porta{
-    padding: 25% 0 0;
+    height: 85vh;
+    padding: 50% 0 0;
   }
   #card-paginas{
-    width:90%;
+    width:80%;
 }
 #exampleModal{
   margin:20% 0 0;

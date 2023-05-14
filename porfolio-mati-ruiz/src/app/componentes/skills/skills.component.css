@@ -66,9 +66,21 @@
 
 
 @media (max-width: 768px) {
+  #skills{
+    height:85vh;
+  }
+
   #titulo-aside-h4{
     margin: 20% auto 3%;
   }
+
+#row h3{
+  width: 75%;
+}
+
+#row button{
+  width: 25%;
+}
 
   #row2{
   flex-direction: row;
