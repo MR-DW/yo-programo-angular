@@ -27,7 +27,7 @@ export class EditEducacionComponent implements OnInit {
         console.log("data ", this.edu)
       }, err =>{
         console.log("aca es el error")
-        alert("Error al modificar experiencia");
+        alert("Error al modificar educación");
 
         this.router.navigate(['/portfolio']);
       }
@@ -41,10 +41,10 @@ export class EditEducacionComponent implements OnInit {
     console.log(this.edu)
     this.sEducacion.update(id, this.edu).subscribe(
       data => {
-        alert("Experiencia Modificada");
+        alert("Educación Modificada");
         this.router.navigate(['/portfolio']);
       }, err => {
-        alert("Error al modificar experiencia");
+        alert("Error al modificar educación");
         this.router.navigate(['/portfolio']);
       }
     )

@@ -36,7 +36,7 @@ ngOnInit(): void {
       console.log("sobremi editado ", this.persona);
     }, err =>{
       console.log("aca es el error")
-      alert("Error al modificar experiencia");
+      alert("Error al modificar información personal");
 
       this.router.navigate(['/portfolio']);
     }
@@ -60,7 +60,7 @@ onUpdate(){
   //   data => {
   //     this.router.navigate(['/portfolio'])
   //   }, err =>{
-  //     alert("Error al modificar experiencia");
+  //     alert("Error al modificar información personal");
   //     this.router.navigate(['/portfolio']);
   //   }
   // )

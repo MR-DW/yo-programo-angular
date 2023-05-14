@@ -4,21 +4,21 @@
   <!-- -->
   <div class="row">
     <div>
-      <h2>Edite Su Experiencia Laboral</h2>
+      <h2>Edite Su Educación</h2>
       <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" >
 
         <div class="form-group">
-          <label for="nombreExp">Nombre de la Empresa</label>
+          <label for="nombreExp">Nuevo Nombre de la Educación</label>
           <input placeholder="Empresa" type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="edu.nombreEdu" required />
 
         </div>
         <div class="form-group">
-          <label for="descripcionExp">Nueva Descripción de su trabajo</label>
+          <label for="descripcionExp">Nueva Descripción de su Educación</label>
           <input placeholder="Desarrollador..." type="text" class="form-control" id="descripcionExp" name="descripcionExp" [(ngModel)]="edu.descripcionEd" required />
 
         </div>
         <button class="btn btn-dark" type="submit">Actualizar</button>
-        <button class="btn btn-dark" type="submit" (click)="retorno()">Volver</button>
+        <button class="btn btn-dark" type="button" (click)="retorno()">Volver</button>
 
       </form>
     </div>

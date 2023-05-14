@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ImgPorfolioService } from 'src/app/servicios/img/img-porfolio.service';
-import { MisTrabajosJsonService } from 'src/app/servicios/misTrabajos/mis-trabajos.json.service';
-// import { ActivatedRoute } from '@angular/router';
-// import { MiCarreraComponent } from '../miCarrera/miCarrera.component';
+import { Proyectos } from 'src/app/model/proyectos';
+import { ProyectosService } from 'src/app/servicios/proyectos.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-misTrabajos',
@@ -12,33 +11,40 @@ import { MisTrabajosJsonService } from 'src/app/servicios/misTrabajos/mis-trabaj
 
 export class MisTrabajosComponent implements OnInit{
 
-  img:any;
-  trabajos:any;
-  componenteId:any;
+  proyectos:Proyectos [] = [];
 
-  constructor(
-    private imgPorfolio: ImgPorfolioService,
-    private misTrabajosPorfolio: MisTrabajosJsonService,
-    // private route: ActivatedRoute,
-    ){
+  constructor(private proyectosS:ProyectosService, private tokenService:TokenService){ }
 
-  }
+  isLogged = false;
 
   ngOnInit(): void{
+    this.cargarProyectos();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+  }
 
-    this.imgPorfolio.obtenerImg().subscribe(data => {
-      this.img = data;
-    });
+  cargarProyectos(): void{
+    this.proyectosS.lista().subscribe(
+      data=>{
+        this.proyectos = data;
+        console.log("proyectos", this.proyectos);
+      }
+    )
+  }
 
-    this.misTrabajosPorfolio.obtenerMiTrabajo().subscribe(data => {
-      this.trabajos = data.misTrabajos;
-      console.log(data.misTrabajos);
-    });
-
-    // this.route.paramMap.subscribe(params => {
-    //   this.componentId = products[+params.get('componentId')];
-    // });
-
+  borrar(id:number):void{
+    if( id != undefined){
+      this.proyectosS.delete(id).subscribe(
+        data => {
+          this.cargarProyectos();
+        }, err => {
+          alert("No se pudo eliminar");
+        }
+      )
+    }
   }
 
 }

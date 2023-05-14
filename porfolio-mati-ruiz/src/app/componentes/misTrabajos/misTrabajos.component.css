@@ -35,11 +35,15 @@
 }
 
 #btn-modal{
-    background-color:rgb(255, 255, 255);
     border:none;
     color:black;
     width:50%;
-    margin:0 auto;
+    margin:3% auto;
+}
+
+.btn2{
+  width: 50%;
+  margin:0 auto;
 }
 
 
@@ -73,7 +77,7 @@
   border-top: 1px inset black;
 }
 
-#Descripcion-firstweb{
+.Descripcion-firstweb{
   margin: 2% auto;
     color:rgb(0, 0, 0);
     width:100%;
